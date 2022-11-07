@@ -1,0 +1,66 @@
+/* 
+bg color: #ff9100
+ */
+
+ #business_name_generator .btn-primary {
+    background-color: #ff9100;
+    border: none;
+ }
+
+ #business_name_generator .btn-primary:hover {
+    opacity: 0.8;
+ }
+
+ #business_name_generator #search_input, #business_name_generator #filter_button {
+    padding: 10px;
+ }
+
+ #business_name_generator .btn {
+    white-space: nowrap;
+ }
+
+ #business_name_generator .btn-outline {
+    border: 1px solid rgb(196, 196, 196);
+ }
+
+ #business_name_generator .btn-outline:hover {
+    border: 1px solid black;
+ }
+
+ #business_name_generator .form-control:active,
+ #business_name_generator .form-control:focus,
+ #business_name_generator .btn:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+ }
+
+ #business_name_generator .form-control:active,
+ #business_name_generator .form-control:focus {
+    border: 1px solid black;
+ }
+
+ #business_name_generator .filter-container {
+    position: relative;
+ }
+
+ #business_name_generator .filter-modal {
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    right: 0;
+    margin-top: 10px;
+    width: 600px;
+ }
+
+ #business_name_generator #result {
+    font-weight: 500;
+ }
+
+ #business_name_generator #result a {
+    text-decoration: none;
+    color: black;
+ }
+
+ #business_name_generator #result a:hover {
+    color: #ff9100;
+ }
