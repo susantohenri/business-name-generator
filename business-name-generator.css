@@ -20,7 +20,7 @@
    box-shadow: 0 .2rem .5rem 0 #e34d6c;
  }
 
- #business_name_generator #search_input, #business_name_generator #filter_button {
+ #business_name_generator .search-input, #business_name_generator #filter_button {
     padding: 10px;
  }
 

@@ -16,4 +16,14 @@ jQuery(document).ready(function() {
         jQuery(this).addClass('d-none')
         jQuery(this).parent().find('.btn-like-outline').removeClass('d-none')
     })
+
+    jQuery('#business_name_generator #business_name_generator_form_home').on('submit', function(e) {
+        e.preventDefault()
+        let keyword = jQuery('#business_name_generator #business_name_generator_form_home #search_input_home').val()
+        
+        jQuery('#business_name_generator #business_name_generator_form_home').parent().addClass('d-none')
+        jQuery('#business_name_generator #business_name_generator_result').removeClass('d-none')
+        jQuery('#business_name_generator #search_input').val(keyword)
+        jQuery('#business_name_generator .search-keyword').text(keyword)
+    })
 })
