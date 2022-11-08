@@ -1,14 +1,23 @@
-/* 
-bg color: #ff9100
- */
+#business_name_generator .btn-like-wrapper button {
+   border: none;
+   background-color: transparent;
+   padding: 0;
+   margin-right: 5px;
+}
 
- #business_name_generator .btn-primary {
-    background-color: #ff9100;
-    border: none;
+#business_name_generator .btn-like-wrapper img {
+   width: 18px;
+   height: 18px;
+}
+
+#business_name_generator .btn-primary {
+   background-color: #ff3e7d;
+   border: none;
  }
 
  #business_name_generator .btn-primary:hover {
-    opacity: 0.8;
+   background-color: #e34d6c;
+   box-shadow: 0 .2rem .5rem 0 #e34d6c;
  }
 
  #business_name_generator #search_input, #business_name_generator #filter_button {
@@ -52,15 +61,15 @@ bg color: #ff9100
     width: 600px;
  }
 
- #business_name_generator #result {
-    font-weight: 500;
- }
-
  #business_name_generator #result a {
     text-decoration: none;
     color: black;
  }
 
  #business_name_generator #result a:hover {
-    color: #ff9100;
+    color: #ff3e7d;
+ }
+
+ #business_name_generator #result .result-item:nth-child(odd) {
+    background-color: #f9f9f9;
  }
