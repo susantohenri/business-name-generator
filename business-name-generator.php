@@ -141,6 +141,20 @@ add_shortcode('business-name-generator', function ($atts) {
                             </div>
                         </div>
                     </div>
+                    
+                    <div class='business_name_generator_pagination'>
+                        <button class='btn-icon prev'>
+                            <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'alt='icon next'>
+                        </button>
+                        <div class='business_name_generator_pagination_nav'>
+                            <button class='active'>1</button>
+                            <button>2</button>
+                            <button>3</button>
+                        </div>
+                        <button class='btn-icon'>
+                            <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'alt='icon next'>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

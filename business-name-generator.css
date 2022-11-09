@@ -1,3 +1,8 @@
+#business_name_generator .btn-icon {
+   display: flex;
+   align-items: center;
+}
+
 #business_name_generator .btn-like-wrapper button {
    border: none;
    background-color: transparent;
@@ -107,6 +112,44 @@
 
 #business_name_generator .form-range::-ms-thumb {
    background: gray;
+}
+
+/* pagination */
+#business_name_generator .business_name_generator_pagination {
+   display: flex;
+   gap: 10px;
+   justify-content: center;
+   margin-top: 20px;
+   align-items: center;
+}
+
+#business_name_generator .business_name_generator_pagination button {
+   border: none;
+   background-color: transparent;
+   padding: 0;
+   margin: 0 5px;
+}
+
+#business_name_generator .business_name_generator_pagination .business_name_generator_pagination_nav {
+   display: flex;
+   gap: 10px;
+   justify-content: center;
+   margin: 0;
+   padding: 0;
+   align-items: center;
+}
+
+#business_name_generator .business_name_generator_pagination .business_name_generator_pagination_nav button {
+   color: gray;
+}
+
+#business_name_generator .business_name_generator_pagination .business_name_generator_pagination_nav button.active {
+   color: #ff9100;
+   font-weight: bold;
+}
+
+#business_name_generator .business_name_generator_pagination .prev img{
+   transform: rotate(180deg);
 }
 
 @media (max-width: 468px) {
