@@ -40,7 +40,7 @@ add_shortcode('business-name-generator', function () {
         <div id='business_name_generator' class='alignfull p-5'>
             <div class='p-4'>
                 <form method='post' id='business_name_generator_form_home'>
-                    <div class='input-group shadow-sm'>
+                    <div class='input-group input-group-lg shadow-sm'>
                         <input type='text' id='search_input_home' class='search-input form-control' placeholder='Name...' required>
                         <button type='submit' class='btn btn-primary' type='button' id='search_button_home'>GENERATE NAMES</button>
                     </div>
