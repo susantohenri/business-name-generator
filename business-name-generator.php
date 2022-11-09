@@ -103,8 +103,8 @@ add_shortcode('business-name-generator', function () {
                                     <div class='col-4'>
                                         <p class='fw-bold'>Length</p>
                                         <div>
-                                            <input type='range' class='form-range' min='4' max='15' step='1' id='length'>
-                                            <label class='text-black-50'>Characters</label>
+                                            <input type='range' class='form-range' min='4' max='15' step='1' name='len' id='length'>
+                                            <label class='text-black-50'><span class='length-value'></span> Characters</label>
                                         </div>
                                     </div>
                                 </div>
@@ -120,224 +120,16 @@ add_shortcode('business-name-generator', function () {
                     <div class='px-2'>
                         <div class='row m-0' id='result'>
                             <div class='col-md-3 p-0 pe-3' id='result_1'>
-                                <div class='result-item-wrapper'>
-                                    <div class='result-item d-flex py-2 px-3 gap-2'>
-                                        <div class='btn-like-wrapper border-end'>
-                                            <button class='btn-like-outline'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                            <button class='btn-like-fill d-none'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                        </div>
-                                        <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
-                                            <p class='m-0'>Enshop</p>
-                                            <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
-                                                alt='icon next'>
-                                        </a>
-                                    </div>
-                                    <div class='result-item d-flex py-2 px-3 gap-2'>
-                                        <div class='btn-like-wrapper border-end'>
-                                            <button class='btn-like-outline'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                            <button class='btn-like-fill d-none'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                        </div>
-                                        <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
-                                            <p class='m-0'>Enshop</p>
-                                            <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
-                                                alt='icon next'>
-                                        </a>
-                                    </div>
-                                    <div class='result-item d-flex py-2 px-3 gap-2'>
-                                        <div class='btn-like-wrapper border-end'>
-                                            <button class='btn-like-outline'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                            <button class='btn-like-fill d-none'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                        </div>
-                                        <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
-                                            <p class='m-0'>Enshop</p>
-                                            <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
-                                                alt='icon next'>
-                                        </a>
-                                    </div>
-                                </div>
+                                <div class='result-item-wrapper'></div>
                             </div>
                             <div class='col-md-3 p-0 pe-3' id='result_2'>
-                                <div class='result-item-wrapper'>
-                                    <div class='result-item d-flex py-2 px-3 gap-2'>
-                                        <div class='btn-like-wrapper border-end'>
-                                            <button class='btn-like-outline'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                            <button class='btn-like-fill d-none'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                        </div>
-                                        <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
-                                            <p class='m-0'>Enshop</p>
-                                            <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
-                                                alt='icon next'>
-                                        </a>
-                                    </div>
-                                    <div class='result-item d-flex py-2 px-3 gap-2'>
-                                        <div class='btn-like-wrapper border-end'>
-                                            <button class='btn-like-outline'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                            <button class='btn-like-fill d-none'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                        </div>
-                                        <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
-                                            <p class='m-0'>Enshop</p>
-                                            <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
-                                                alt='icon next'>
-                                        </a>
-                                    </div>
-                                    <div class='result-item d-flex py-2 px-3 gap-2'>
-                                        <div class='btn-like-wrapper border-end'>
-                                            <button class='btn-like-outline'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                            <button class='btn-like-fill d-none'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                        </div>
-                                        <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
-                                            <p class='m-0'>Enshop</p>
-                                            <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
-                                                alt='icon next'>
-                                        </a>
-                                    </div>
-                                </div>
+                                <div class='result-item-wrapper'></div>
                             </div>
                             <div class='col-md-3 p-0 pe-3' id='result_3'>
-                                <div class='result-item-wrapper'>
-                                    <div class='result-item d-flex py-2 px-3 gap-2'>
-                                        <div class='btn-like-wrapper border-end'>
-                                            <button class='btn-like-outline'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                            <button class='btn-like-fill d-none'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                        </div>
-                                        <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
-                                            <p class='m-0'>Enshop</p>
-                                            <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
-                                                alt='icon next'>
-                                        </a>
-                                    </div>
-                                    <div class='result-item d-flex py-2 px-3 gap-2'>
-                                        <div class='btn-like-wrapper border-end'>
-                                            <button class='btn-like-outline'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                            <button class='btn-like-fill d-none'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                        </div>
-                                        <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
-                                            <p class='m-0'>Enshop</p>
-                                            <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
-                                                alt='icon next'>
-                                        </a>
-                                    </div>
-                                    <div class='result-item d-flex py-2 px-3 gap-2'>
-                                        <div class='btn-like-wrapper border-end'>
-                                            <button class='btn-like-outline'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                            <button class='btn-like-fill d-none'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                        </div>
-                                        <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
-                                            <p class='m-0'>Enshop</p>
-                                            <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
-                                                alt='icon next'>
-                                        </a>
-                                    </div>
-                                </div>
+                                <div class='result-item-wrapper'></div>
                             </div>
                             <div class='col-md-3 p-0 pe-3' id='result_4'>
-                                <div class='result-item-wrapper'>
-                                    <div class='result-item d-flex py-2 px-3 gap-2'>
-                                        <div class='btn-like-wrapper border-end'>
-                                            <button class='btn-like-outline'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                            <button class='btn-like-fill d-none'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                        </div>
-                                        <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
-                                            <p class='m-0'>Enshop</p>
-                                            <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
-                                                alt='icon next'>
-                                        </a>
-                                    </div>
-                                    <div class='result-item d-flex py-2 px-3 gap-2'>
-                                        <div class='btn-like-wrapper border-end'>
-                                            <button class='btn-like-outline'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                            <button class='btn-like-fill d-none'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                        </div>
-                                        <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
-                                            <p class='m-0'>Enshop</p>
-                                            <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
-                                                alt='icon next'>
-                                        </a>
-                                    </div>
-                                    <div class='result-item d-flex py-2 px-3 gap-2'>
-                                        <div class='btn-like-wrapper border-end'>
-                                            <button class='btn-like-outline'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                            <button class='btn-like-fill d-none'>
-                                                <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                                    alt='love icon'>
-                                            </button>
-                                        </div>
-                                        <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
-                                            <p class='m-0'>Enshop</p>
-                                            <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
-                                                alt='icon next'>
-                                        </a>
-                                    </div>
-                                </div>
+                                <div class='result-item-wrapper'></div>
                             </div>
                         </div>
                     </div>
