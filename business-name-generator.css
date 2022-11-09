@@ -11,13 +11,13 @@
 }
 
 #business_name_generator .btn-primary {
-   background-color: #ff3e7d;
+   background-color: #ff9100;
    border: none;
  }
 
  #business_name_generator .btn-primary:hover {
-   background-color: #e34d6c;
-   box-shadow: 0 .2rem .5rem 0 #e34d6c;
+   background-color: #ec8600;
+   box-shadow: 0 .2rem .5rem 0 #ec8600;
  }
 
  #business_name_generator .search-input, #business_name_generator #filter_button {
@@ -67,7 +67,7 @@
  }
 
  #business_name_generator #result a:hover {
-    color: #ff3e7d;
+    color: #ff9100;
  }
 
  #business_name_generator #result .result-item:nth-child(odd) {
@@ -76,4 +76,21 @@
 
  #business_name_generator .filter-modal .form-check label {
    cursor: pointer;
+ }
+
+ #business_name_generator .form-check-input:checked {
+   background-color: #ff9100;
+   border-color: #ff9100;
+ }
+
+ #business_name_generator .form-range::-webkit-slider-thumb {
+   background: #ff9100;
+ }
+
+ #business_name_generator .form-range::-moz-range-thumb {
+   background: gray;
+ }
+ 
+ #business_name_generator .form-range::-ms-thumb {
+   background: gray;
  }

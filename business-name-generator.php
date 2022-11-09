@@ -112,7 +112,6 @@ add_shortcode('business-name-generator', function () {
                         </div>
                     </div>
                 </div>
-                <hr class='mt-5'>
                 <div>
                     <div class='p-2' style='font-size: 24px;'>
                         <p>Business name suggestions for <b class='search-keyword'>Cek</b></p>

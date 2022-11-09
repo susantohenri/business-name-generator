@@ -137,16 +137,6 @@ jQuery(document).ready(function () {
                 jQuery('#business_name_generator #result_1 .result-item-wrapper').html(result_filtered_divide[0].map((item, i) => {
                     return `
                         <div class='result-item d-flex py-2 px-3 gap-2'>
-                            <div class='btn-like-wrapper border-end'>
-                                <button class='btn-like-outline'>
-                                    <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                        alt='love icon'>
-                                </button>
-                                <button class='btn-like-fill d-none'>
-                                    <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                        alt='love icon'>
-                                </button>
-                            </div>
                             <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
                                 <p class='m-0'>${item}</p>
                                 <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
@@ -161,16 +151,6 @@ jQuery(document).ready(function () {
                 jQuery('#business_name_generator #result_2 .result-item-wrapper').html(result_filtered_divide[1].map((item, i) => {
                     return `
                         <div class='result-item d-flex py-2 px-3 gap-2'>
-                            <div class='btn-like-wrapper border-end'>
-                                <button class='btn-like-outline'>
-                                    <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                        alt='love icon'>
-                                </button>
-                                <button class='btn-like-fill d-none'>
-                                    <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                        alt='love icon'>
-                                </button>
-                            </div>
                             <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
                                 <p class='m-0'>${item}</p>
                                 <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
@@ -185,16 +165,6 @@ jQuery(document).ready(function () {
                 jQuery('#business_name_generator #result_3 .result-item-wrapper').html(result_filtered_divide[2].map((item, i) => {
                     return `
                         <div class='result-item d-flex py-2 px-3 gap-2'>
-                            <div class='btn-like-wrapper border-end'>
-                                <button class='btn-like-outline'>
-                                    <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                        alt='love icon'>
-                                </button>
-                                <button class='btn-like-fill d-none'>
-                                    <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                        alt='love icon'>
-                                </button>
-                            </div>
                             <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
                                 <p class='m-0'>${item}</p>
                                 <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
@@ -209,16 +179,6 @@ jQuery(document).ready(function () {
                 jQuery('#business_name_generator #result_4 .result-item-wrapper').html(result_filtered_divide[3].map((item, i) => {
                     return `
                         <div class='result-item d-flex py-2 px-3 gap-2'>
-                            <div class='btn-like-wrapper border-end'>
-                                <button class='btn-like-outline'>
-                                    <img src='https://ik.imagekit.io/radix/namify/icons/heart-outlined.svg'
-                                        alt='love icon'>
-                                </button>
-                                <button class='btn-like-fill d-none'>
-                                    <img src='https://ik.imagekit.io/radix/namify/icons/heart-filled.svg'
-                                        alt='love icon'>
-                                </button>
-                            </div>
                             <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
                                 <p class='m-0'>${item}</p>
                                 <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
@@ -229,17 +189,6 @@ jQuery(document).ready(function () {
                 }))
             }
         }
-
-        // handle toggle like button
-        jQuery('#business_name_generator .btn-like-outline').on('click', function () {
-            jQuery(this).addClass('d-none')
-            jQuery(this).parent().find('.btn-like-fill').removeClass('d-none')
-        })
-
-        jQuery('#business_name_generator .btn-like-fill').on('click', function () {
-            jQuery(this).addClass('d-none')
-            jQuery(this).parent().find('.btn-like-outline').removeClass('d-none')
-        })
     }
 
     function businessNameGenerator_toTitleCase(str) {
@@ -250,9 +199,5 @@ jQuery(document).ready(function () {
 
     function businessNameGenerator_WordCount(str) {
         return str.split(" ").length;
-    }
-
-    function businessNameGenerator_letterCount(str) {
-        return str.length;
     }
 })
