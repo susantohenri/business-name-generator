@@ -46,10 +46,10 @@ add_shortcode('business-name-generator', function ($atts) {
     );
 
     return "
-        <div id='business_name_generator' class='alignfull p-5'>
+        <div id='business_name_generator' class='alignfull px-5'>
             <div class='p-4'>
                 <form method='post' id='business_name_generator_form_home'>
-                    <div class='input-group input-group-lg shadow-sm'>
+                    <div class='input-group input-group-lg'>
                         <input type='text' id='search_input_home' class='search-input form-control' placeholder='Name...' required>
                         <button type='submit' class='btn btn-primary' type='button' id='search_button_home'>GENERATE NAMES</button>
                     </div>
@@ -57,18 +57,18 @@ add_shortcode('business-name-generator', function ($atts) {
             </div>
             <div id='business_name_generator_result' class='d-none'>
                 <div class='row m-0 p-2'>
-                    <div class='d-flex gap-4 p-0'>
+                    <div class='d-flex flex-column flex-md-row gap-4 p-0'>
                         <form method='post' id='business_name_generator_form' style='width: 100%'>
                             <div class='input-group shadow-sm'>
                                 <input type='text' id='search_input' class='search-input form-control' placeholder='Name...' required>
                                 <button type='submit' class='btn btn-primary' type='button' id='search_button'>GENERATE NAMES</button>
                             </div>
                         </form>
-                        <div class='filter-container'>
+                        <div class='filter-container text-end'>
                             <button class='btn btn-outline shadow-sm' id='filter_button'>Select Filters</button>
-                            <div class='filter-modal p-4 shadow rounded d-none'>
+                            <div class='filter-modal p-4 shadow rounded text-start d-none'>
                                 <div class='row'>
-                                    <div class='col-4'>
+                                    <div class='col-12 col-md-4'>
                                         <p class='fw-bold'>Words</p>
                                         <div>
                                             <div class='form-check mb-3'>
@@ -85,7 +85,7 @@ add_shortcode('business-name-generator', function ($atts) {
                                                     Two words
                                                 </label>
                                             </div>
-                                            <div class='form-check'>
+                                            <div class='form-check mb-3'>
                                                 <input class='form-check-input' type='checkbox' name='multiple_words' value='1'
                                                     id='filter_multiple_words' checked>
                                                 <label class='form-check-label text-black-50' for='filter_multiple_words'>
@@ -94,7 +94,7 @@ add_shortcode('business-name-generator', function ($atts) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class='col-4'>
+                                    <div class='col-12 col-md-4'>
                                         <p class='fw-bold'>Style</p>
                                         <div>
                                             <div class='form-check form-switch mb-3'>
@@ -102,14 +102,14 @@ add_shortcode('business-name-generator', function ($atts) {
                                                     value='1' checked>
                                                 <label class='form-check-label text-black-50' for='prefix'>Prefix</label>
                                             </div>
-                                            <div class='form-check form-switch'>
+                                            <div class='form-check form-switch mb-3'>
                                                 <input class='form-check-input' type='checkbox' id='suffix' name='suffix'
                                                     value='1' checked>
                                                 <label class='form-check-label text-black-50' for='suffix'>Suffix</label>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class='col-4'>
+                                    <div class='col-12 col-md-4'>
                                         <p class='fw-bold'>Length</p>
                                         <div>
                                             <input type='range' class='form-range' min='4' max='15' step='1' name='len' id='length'>
