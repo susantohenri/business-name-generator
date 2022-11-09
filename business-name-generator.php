@@ -37,7 +37,7 @@ add_shortcode('business-name-generator', function () {
     wp_enqueue_script('business-name-generator');
 
     return "
-        <div id='business_name_generator'>
+        <div id='business_name_generator' class='alignfull p-5'>
             <div class='p-4'>
                 <form method='post' id='business_name_generator_form_home'>
                     <div class='input-group shadow-sm'>
