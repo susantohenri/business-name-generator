@@ -137,7 +137,7 @@ jQuery(document).ready(function () {
                 jQuery('#business_name_generator #result_1 .result-item-wrapper').html(result_filtered_divide[0].map((item, i) => {
                     return `
                         <div class='result-item d-flex py-2 px-3 gap-2'>
-                            <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
+                            <a href='${business_name_generator.url}' class='flex-grow-1 d-flex align-items-center justify-content-between'>
                                 <p class='m-0'>${item}</p>
                                 <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
                                     alt='icon next'>
@@ -151,7 +151,7 @@ jQuery(document).ready(function () {
                 jQuery('#business_name_generator #result_2 .result-item-wrapper').html(result_filtered_divide[1].map((item, i) => {
                     return `
                         <div class='result-item d-flex py-2 px-3 gap-2'>
-                            <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
+                            <a href='${business_name_generator.url}' class='flex-grow-1 d-flex align-items-center justify-content-between'>
                                 <p class='m-0'>${item}</p>
                                 <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
                                     alt='icon next'>
@@ -165,7 +165,7 @@ jQuery(document).ready(function () {
                 jQuery('#business_name_generator #result_3 .result-item-wrapper').html(result_filtered_divide[2].map((item, i) => {
                     return `
                         <div class='result-item d-flex py-2 px-3 gap-2'>
-                            <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
+                            <a href='${business_name_generator.url}' class='flex-grow-1 d-flex align-items-center justify-content-between'>
                                 <p class='m-0'>${item}</p>
                                 <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
                                     alt='icon next'>
@@ -179,7 +179,7 @@ jQuery(document).ready(function () {
                 jQuery('#business_name_generator #result_4 .result-item-wrapper').html(result_filtered_divide[3].map((item, i) => {
                     return `
                         <div class='result-item d-flex py-2 px-3 gap-2'>
-                            <a href='#' class='flex-grow-1 d-flex align-items-center justify-content-between'>
+                            <a href='${business_name_generator.url}' class='flex-grow-1 d-flex align-items-center justify-content-between'>
                                 <p class='m-0'>${item}</p>
                                 <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'
                                     alt='icon next'>

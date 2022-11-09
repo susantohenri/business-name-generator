@@ -20,7 +20,9 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-add_shortcode('business-name-generator', function () {
+add_shortcode('business-name-generator', function ($atts) {
+    $atts = shortcode_atts(['url' => ''], $atts);
+
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.6.1.js');
     wp_enqueue_script('jquery');
 
@@ -35,6 +37,13 @@ add_shortcode('business-name-generator', function () {
 
     wp_register_script('business-name-generator', plugin_dir_url(__FILE__) . 'business-name-generator.js?cache-breaker=' . time());
     wp_enqueue_script('business-name-generator');
+    wp_localize_script(
+        'business-name-generator',
+        'business_name_generator',
+        array(
+            'url' => $atts['url']
+        )
+    );
 
     return "
         <div id='business_name_generator' class='alignfull p-5'>
@@ -114,7 +123,7 @@ add_shortcode('business-name-generator', function () {
                 </div>
                 <div>
                     <div class='p-2' style='font-size: 24px;'>
-                        <p>Business name suggestions for <b class='search-keyword'>Cek</b></p>
+                        <p>Store name suggestions for <b class='search-keyword'>&nbsp;</b> (Click on them to register on Shopify!)</p>
                     </div>
                     <div class='px-2'>
                         <div class='row m-0' id='result'>
