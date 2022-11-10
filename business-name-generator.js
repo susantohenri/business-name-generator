@@ -61,7 +61,7 @@ jQuery(document).ready(function () {
         businessNameGenerator_generateNames(search, filters, value)
     })
 
-    function businessNameGenerator_generateNames(keyword, filters, len = null) {
+    function businessNameGenerator_generateNames(keyword, filters, len = null, cpage = 1) {
         let dataNames = ["active", "auto", "app", "avi", "base", "co", "coin", "core", "clear", "wallet", "echo", "even", "ever", "fair", "go", "high", "hyper", "in", "inter", "good", "jump", "live", "make", "mass", "work", "matter", "home", "on", "one", "open", "over", "out", "buddy", "real", "peak", "pure", "money", "silver", "solid", "spark", "start", "true", "up", "vibe", "atlas", "base", "bay", "boost", "case", "center", "cast", "click", "dash", "deck", "dock", "dot", "drop", "engine", "flow", "glow", "grid", "gram", "graph", "hub", "focus", "kit", "lab", "level", "layer", "line", "logic", "load", "loop", "meet", "method", "mode", "mark", "ness", "now", "pass", "port", "post", "press", "push", "rise", "scape", "scale", "scan", "scout", "sense", "set", "shift", "ship", "side", "signal", "snap", "scope", "space", "span", "spark", "spot", "start", "storm", "stripe", "sync", "tap", "tilt", "ture", "type", "view", "verge", "vibe", "ware", "yard", "up"]
         let dataSuffix = ["ary", "able", "ance", "ible", "ice", "ite", "er", "eon", "ent", "ful", "gent", "tion", "sion"]
         let result = []
@@ -124,6 +124,57 @@ jQuery(document).ready(function () {
                 })
             }
         }
+
+        // handle pagination
+        let total = result_filtered.length
+        let per_page = 200
+        let total_page = Math.ceil(total / per_page)
+        let start = (cpage - 1) * per_page
+        let end = start + per_page
+        result_filtered = result_filtered.slice(start, end)
+
+        jQuery('#business_name_generator .business_name_generator_pagination_nav').html('')
+        for (let i = 1; i <= total_page; i++) {
+            jQuery('#business_name_generator .business_name_generator_pagination_nav').append(`<button data-page=${i}>${i}</button>`)
+        }
+
+        jQuery(`#business_name_generator .business_name_generator_pagination_nav button[data-page=${cpage}]`).addClass('active')
+
+        jQuery('#business_name_generator .business_name_generator_pagination_nav button').on('click', function() {
+            let page = jQuery(this).data('page')
+            businessNameGenerator_generateNames(keyword, filters, len, page)
+        })
+
+        if (cpage > 1) {
+            jQuery('#business_name_generator .business_name_generator_pagination .btn-prev-wrapper').html(`
+                <button class='btn-icon prev'>
+                    <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'alt='icon prev'>
+                </button>
+            `)
+        } else {
+            jQuery('#business_name_generator .business_name_generator_pagination .btn-prev-wrapper').html('')
+        }
+
+        if (cpage < total_page) {
+            jQuery('#business_name_generator .business_name_generator_pagination .btn-next-wrapper').html(`
+                <button class='btn-icon next'>
+                    <img src='https://ik.imagekit.io/radix/namify/icons/suggestion-next-arrow.svg'alt='icon next'>
+                </button>
+            `)
+        } else {
+            jQuery('#business_name_generator .business_name_generator_pagination .btn-next-wrapper').html('')
+        }
+
+        jQuery('#business_name_generator .business_name_generator_pagination .prev').on('click', function() {
+            businessNameGenerator_generateNames(keyword, filters, len, cpage - 1)
+        })
+
+        jQuery('#business_name_generator .business_name_generator_pagination .next').on('click', function() {
+            businessNameGenerator_generateNames(keyword, filters, len, cpage + 1)
+        })
+
+        // sort result
+        result_filtered = result_filtered.sort()
 
         // result_filtered divide into 4
         let result_filtered_divide = []
